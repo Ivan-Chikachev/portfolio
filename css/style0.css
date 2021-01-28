@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/*Обнуление*/
+/* line 3, ../задания/css_5/scss/style0.scss */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* line 9, ../задания/css_5/scss/style0.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 17, ../задания/css_5/scss/style0.scss */
+:focus,
+:active {
+  outline: none;
+}
+
+/* line 22, ../задания/css_5/scss/style0.scss */
+a:focus,
+a:active {
+  outline: none;
+}
+
+/* line 27, ../задания/css_5/scss/style0.scss */
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+/* line 34, ../задания/css_5/scss/style0.scss */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 46, ../задания/css_5/scss/style0.scss */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/* line 52, ../задания/css_5/scss/style0.scss */
+input::-ms-clear {
+  display: none;
+}
+
+/* line 56, ../задания/css_5/scss/style0.scss */
+button {
+  cursor: pointer;
+}
+
+/* line 60, ../задания/css_5/scss/style0.scss */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 65, ../задания/css_5/scss/style0.scss */
+a,
+a:visited {
+  text-decoration: none;
+}
+
+/* line 70, ../задания/css_5/scss/style0.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 74, ../задания/css_5/scss/style0.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 78, ../задания/css_5/scss/style0.scss */
+img {
+  vertical-align: top;
+}
+
+/* line 82, ../задания/css_5/scss/style0.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style0.css.map */

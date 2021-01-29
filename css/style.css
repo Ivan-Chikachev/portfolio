@@ -173,6 +173,11 @@ html {
   background-size: cover;
   height: 650px;
 }
+@media (max-width: 767.98px) {
+  .first-scrin {
+    height: 520px;
+  }
+}
 
 .second-scrin {
   padding: 80px 0 0;
@@ -220,6 +225,11 @@ html {
 .five-scrin {
   background: #1b1a1a url("../img/footer.png") no-repeat 0px 100px;
   background-size: cover;
+}
+@media (max-width: 767.98px) {
+  .five-scrin {
+    background: #1b1a1a;
+  }
 }
 
 .header {
@@ -436,7 +446,7 @@ html {
   }
 }
 .skills .programm {
-  width: 450px;
+  width: 400px;
   margin: 40px auto;
   padding: 20px 10px;
 }
@@ -458,7 +468,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .skills .programm .logo__item img {
-    height: 45px;
+    height: 40px;
   }
 }
 .skills .programm .logo__item span {
@@ -469,12 +479,12 @@ html {
 }
 @media (max-width: 767.98px) {
   .skills .programm .logo__item {
-    margin: 5px 8px;
+    margin: 5px 7px;
   }
 }
 @media (max-width: 767.98px) {
   .skills .programm {
-    margin: 0 auto;
+    margin: 50px auto 30px;
     padding: 20px 5px;
   }
 }
@@ -517,7 +527,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .element__item {
-    width: 100%;
+    width: 150px;
     margin: 15px auto;
   }
 }
@@ -613,8 +623,8 @@ html {
 @media (max-width: 767.98px) {
   .view .mask,
 .view .content {
-    width: 480px;
-    height: 550px;
+    width: 440px;
+    height: 500px;
   }
 }
 .view img {
@@ -651,8 +661,8 @@ html {
 }
 @media (max-width: 767.98px) {
   .view {
-    width: 480px;
-    height: 550px;
+    width: 440px;
+    height: 500px;
     margin: 5px auto;
   }
 }

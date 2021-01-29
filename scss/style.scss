@@ -91,35 +91,45 @@ html {
 }
 //--scrins------
 .first-scrin {
-	background: rgba(27, 26, 26, 1) url('../img/header.png') no-repeat fixed;
+	background: rgba(27, 26, 26, 1) url('../img/header.png') no-repeat;
 	background-size: cover;
 	height: 650px;
 }
 .second-scrin {
-	box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.096);
 	padding: 80px 0 0;
-	height: 650px;
+
 	background: rgba(27, 26, 26, 1) url('../img/blue.png') no-repeat 180px;
 	background-size: cover;
 	@media (max-width: $md1+px) {
 		background-position: 50px 0;
 	}
 	@media (max-width: $md2+px) {
-		background-position: -120px 0;
+		background-position: -80px 0;
 	}
 	@media (max-width: $md3+px) {
 		background-position: -700px 170px;
-		height: 850px;
 	}
 }
 .three-scrin {
+	background: rgba(27, 26, 26, 1) url('../img/skills.png') no-repeat -90px 80px;
+	background-size: cover;
 	padding: 80px 0 0;
-	height: 800px;
 }
 .four-scrin {
+	background: rgba(27, 26, 26, 1) url('../img/portfolio.png') no-repeat -100px;
+	background-size: cover;
 	padding: 80px 0 0;
+	@media (max-width: $md1+px) {
+		background-position: -400px;
+	}
+	@media (max-width: $md2+px) {
+		background-position: -500px;
+	}
 }
-
+.five-scrin {
+	background: rgba(27, 26, 26, 1) url('../img/footer.png') no-repeat 0px 100px;
+	background-size: cover;
+}
 //-----Header-----
 .header {
 	height: 120px;
@@ -237,7 +247,10 @@ html {
 			font-size: 16px;
 			line-height: 25px;
 			&:nth-child(2) {
-				margin: 0 0 20px;
+				margin: 0 0 12px;
+			}
+			&:nth-child(3) {
+				margin: 0 0 12px;
 			}
 			@media (max-width: $md2+px) {
 				font-size: 14px;
@@ -247,7 +260,9 @@ html {
 	}
 	&__photo {
 		width: 40%;
+		background: rgb(27, 27, 27);
 		img {
+			opacity: .5;
 			width: 100%;
 			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.726);
 		}
@@ -264,23 +279,46 @@ html {
 .skills {
 	text-align: center;
 	&__name {
-		margin: 0 0 25px;
+		margin: 0 0 60px;
 		h3 {
 			font-size: 42px;
 			font-weight: 700;
 			margin: 0 0 10px;
+			@media (max-width: $md3+px) {
+				font-size: 38px;
+			}
 		}
 		p {
 			line-height: 25px;
-			width: 700px;
+			width: 600px;
+			margin: 0 auto;
+			@media (max-width: $md3+px) {
+				width: 85%;
+				margin: 0 auto;
+			}
+		}
+		@media (max-width: $md3+px) {
+			margin: 0 0 30px;
+		}
+	}
+	&__tool {
+		font-weight: 500;
+		line-height: 24px;
+		text-align: center;
+		display: flex;
+		justify-content: space-around;
+		@media (max-width: $md3+px) {
+			justify-content: space-around;
+			flex-direction: column;
+			width: 80%;
 			margin: 0 auto;
 		}
 	}
 	.programm {
-		width: 400px;
+		width: 450px;
 		margin: 40px auto;
-		padding: 20px 10px ;
-		h3{
+		padding: 20px 10px;
+		h3 {
 			font-size: 24px;
 			font-weight: 700;
 			margin: 0 0 40px;
@@ -288,34 +326,29 @@ html {
 		.logo {
 			display: flex;
 			justify-content: space-between;
-			&__item{
+			&__item {
 				margin: 5px 15px;
-				img{
+				img {
 					height: 60px;
 					margin: 0 0 20px;
+					@media (max-width: $md3+px) {
+						height: 45px;
+					}
 				}
-				
+				span {
+					line-height: 1.5;
+				}
+				&:last-child {
+					width: 70px;
+				}
+				@media (max-width: $md3+px) {
+					margin: 5px 8px;
+				}
 			}
 		}
-	}
-}
-.tool {
-	font-weight: 500;
-	line-height: 24px;
-	text-align: center;
-	display: flex;
-	justify-content: space-around;
-	.element {
-		margin: 0 30px;
-	}
-	&__item {
-		text-align: center;
-		border-bottom: 5px solid rgba(116, 146, 255, 1);
-		padding: 85px 0 40px;
-		margin: 0 0 20px;
-		h5 {
-			font-weight: 700;
-			font-size: 24px;
+		@media (max-width: $md3+px) {
+			margin: 0 auto;
+			padding: 20px 5px;
 		}
 	}
 	.js {
@@ -331,6 +364,39 @@ html {
 		background: url('../img/html.png') top center no-repeat;
 	}
 }
+.element {
+	margin: 0 30px;
+	&__item {
+		width: 240px;
+		text-align: center;
+		border-bottom: 5px solid rgba(116, 146, 255, 1);
+		padding: 85px 0 40px;
+		margin: 0 0 20px;
+		h5 {
+			font-weight: 700;
+			font-size: 24px;
+		}
+		@media (max-width: $md1+px) {
+			width: 195px;
+		}
+		@media (max-width: $md2+px) {
+			width: 178px;
+		}
+		@media (max-width: $md3+px) {
+			width: 100%;
+			margin: 15px auto;
+		}
+	}
+	@media (max-width: $md1+px) {
+		margin: 20px;
+	}
+	@media (max-width: $md2+px) {
+		margin: 8px;
+	}
+	@media (max-width: $md3+px) {
+		margin: 10px 3px;
+	}
+}
 //-----portfolio------
 .portfolio {
 	margin: 0px 0 50px;
@@ -343,6 +409,9 @@ html {
 		p {
 			line-height: 25px;
 			width: 700px;
+			@media (max-width: $md3+px) {
+				width: 400px;
+			}
 		}
 	}
 	&__works {
@@ -350,9 +419,11 @@ html {
 		text-align: center;
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
 	}
 }
-
 .mu {
 	background: url('../img/mu.png') no-repeat center;
 }
@@ -379,6 +450,18 @@ html {
 		overflow: hidden;
 		top: 0;
 		left: 0;
+		@media (max-width: $md1+px) {
+			width: 315px;
+		}
+		@media (max-width: $md2+px) {
+			width: 245px;
+			height: 330px;
+		}
+
+		@media (max-width: $md3+px) {
+			width: 480px;
+			height: 550px;
+		}
 	}
 	img {
 		display: block;
@@ -400,6 +483,20 @@ html {
 		color: #fff;
 		padding: 10px 20px 20px;
 		text-align: center;
+	}
+
+	@media (max-width: $md1+px) {
+		width: 315px;
+	}
+	@media (max-width: $md2+px) {
+		width: 245px;
+		height: 330px;
+	}
+
+	@media (max-width: $md3+px) {
+		width: 480px;
+		height: 550px;
+		margin: 5px auto;
 	}
 }
 .view-first {
@@ -443,14 +540,20 @@ html {
 }
 
 //-----footer-----
+
 .footer {
 	padding: 10px;
 	border-top: 1px solid rgba(63, 63, 63, 0.993);
 	margin-top: auto;
 	height: 100%;
 	&__logo {
-		width: 70px;
+		width: 60px;
 		margin: 40px auto;
+		a {
+			img {
+				width: 60px;
+			}
+		}
 	}
 	&__contact {
 		max-width: 300px;
@@ -458,7 +561,12 @@ html {
 		display: flex;
 		justify-content: space-between;
 		&__item {
-			margin: 100px;
+			margin: 1000px;
+			img {
+				@media (max-width: $md3+px) {
+					width: 10px;
+				}
+			}
 		}
 	}
 	&__about {
@@ -466,5 +574,14 @@ html {
 		font-weight: 400;
 		text-align: center;
 		color: rgb(141, 141, 141);
+	}
+}
+.contact {
+	&__item {
+		img {
+			@media (max-width: $md3+px) {
+				width: 45px;
+			}
+		}
 	}
 }

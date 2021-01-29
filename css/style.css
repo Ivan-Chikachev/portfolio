@@ -169,15 +169,13 @@ html {
 }
 
 .first-scrin {
-  background: #1b1a1a url("../img/header.png") no-repeat fixed;
+  background: #1b1a1a url("../img/header.png") no-repeat;
   background-size: cover;
   height: 650px;
 }
 
 .second-scrin {
-  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.096);
   padding: 80px 0 0;
-  height: 650px;
   background: #1b1a1a url("../img/blue.png") no-repeat 180px;
   background-size: cover;
 }
@@ -188,23 +186,40 @@ html {
 }
 @media (max-width: 992.98px) {
   .second-scrin {
-    background-position: -120px 0;
+    background-position: -80px 0;
   }
 }
 @media (max-width: 767.98px) {
   .second-scrin {
     background-position: -700px 170px;
-    height: 850px;
   }
 }
 
 .three-scrin {
+  background: #1b1a1a url("../img/skills.png") no-repeat -90px 80px;
+  background-size: cover;
   padding: 80px 0 0;
-  height: 800px;
 }
 
 .four-scrin {
+  background: #1b1a1a url("../img/portfolio.png") no-repeat -100px;
+  background-size: cover;
   padding: 80px 0 0;
+}
+@media (max-width: 1182px) {
+  .four-scrin {
+    background-position: -400px;
+  }
+}
+@media (max-width: 992.98px) {
+  .four-scrin {
+    background-position: -500px;
+  }
+}
+
+.five-scrin {
+  background: #1b1a1a url("../img/footer.png") no-repeat 0px 100px;
+  background-size: cover;
 }
 
 .header {
@@ -341,7 +356,10 @@ html {
   line-height: 25px;
 }
 .about-me__text p:nth-child(2) {
-  margin: 0 0 20px;
+  margin: 0 0 12px;
+}
+.about-me__text p:nth-child(3) {
+  margin: 0 0 12px;
 }
 @media (max-width: 992.98px) {
   .about-me__text p {
@@ -351,8 +369,10 @@ html {
 }
 .about-me__photo {
   width: 40%;
+  background: #1b1b1b;
 }
 .about-me__photo img {
+  opacity: 0.5;
   width: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.726);
 }
@@ -372,20 +392,51 @@ html {
   text-align: center;
 }
 .skills__name {
-  margin: 0 0 25px;
+  margin: 0 0 60px;
 }
 .skills__name h3 {
   font-size: 42px;
   font-weight: 700;
   margin: 0 0 10px;
 }
+@media (max-width: 767.98px) {
+  .skills__name h3 {
+    font-size: 38px;
+  }
+}
 .skills__name p {
   line-height: 25px;
-  width: 700px;
+  width: 600px;
   margin: 0 auto;
 }
+@media (max-width: 767.98px) {
+  .skills__name p {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .skills__name {
+    margin: 0 0 30px;
+  }
+}
+.skills__tool {
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 767.98px) {
+  .skills__tool {
+    justify-content: space-around;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 .skills .programm {
-  width: 400px;
+  width: 450px;
   margin: 40px auto;
   padding: 20px 10px;
 }
@@ -405,38 +456,85 @@ html {
   height: 60px;
   margin: 0 0 20px;
 }
-
-.tool {
-  font-weight: 500;
-  line-height: 24px;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
+@media (max-width: 767.98px) {
+  .skills .programm .logo__item img {
+    height: 45px;
+  }
 }
-.tool .element {
+.skills .programm .logo__item span {
+  line-height: 1.5;
+}
+.skills .programm .logo__item:last-child {
+  width: 70px;
+}
+@media (max-width: 767.98px) {
+  .skills .programm .logo__item {
+    margin: 5px 8px;
+  }
+}
+@media (max-width: 767.98px) {
+  .skills .programm {
+    margin: 0 auto;
+    padding: 20px 5px;
+  }
+}
+.skills .js {
+  background: url("../img/js.png") top center no-repeat;
+}
+.skills .react {
+  background: url("../img/react.png") top center no-repeat;
+}
+.skills .css {
+  background: url("../img/css.png") top center no-repeat;
+}
+.skills .html {
+  background: url("../img/html.png") top center no-repeat;
+}
+
+.element {
   margin: 0 30px;
 }
-.tool__item {
+.element__item {
+  width: 240px;
   text-align: center;
   border-bottom: 5px solid #7492ff;
   padding: 85px 0 40px;
   margin: 0 0 20px;
 }
-.tool__item h5 {
+.element__item h5 {
   font-weight: 700;
   font-size: 24px;
 }
-.tool .js {
-  background: url("../img/js.png") top center no-repeat;
+@media (max-width: 1182px) {
+  .element__item {
+    width: 195px;
+  }
 }
-.tool .react {
-  background: url("../img/react.png") top center no-repeat;
+@media (max-width: 992.98px) {
+  .element__item {
+    width: 178px;
+  }
 }
-.tool .css {
-  background: url("../img/css.png") top center no-repeat;
+@media (max-width: 767.98px) {
+  .element__item {
+    width: 100%;
+    margin: 15px auto;
+  }
 }
-.tool .html {
-  background: url("../img/html.png") top center no-repeat;
+@media (max-width: 1182px) {
+  .element {
+    margin: 20px;
+  }
+}
+@media (max-width: 992.98px) {
+  .element {
+    margin: 8px;
+  }
+}
+@media (max-width: 767.98px) {
+  .element {
+    margin: 10px 3px;
+  }
 }
 
 .portfolio {
@@ -451,11 +549,21 @@ html {
   line-height: 25px;
   width: 700px;
 }
+@media (max-width: 767.98px) {
+  .portfolio__name p {
+    width: 400px;
+  }
+}
 .portfolio__works {
   margin: 10px 0 0;
   text-align: center;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .portfolio__works {
+    flex-direction: column;
+  }
 }
 
 .mu {
@@ -489,6 +597,26 @@ html {
   top: 0;
   left: 0;
 }
+@media (max-width: 1182px) {
+  .view .mask,
+.view .content {
+    width: 315px;
+  }
+}
+@media (max-width: 992.98px) {
+  .view .mask,
+.view .content {
+    width: 245px;
+    height: 330px;
+  }
+}
+@media (max-width: 767.98px) {
+  .view .mask,
+.view .content {
+    width: 480px;
+    height: 550px;
+  }
+}
 .view img {
   display: block;
   position: relative;
@@ -509,6 +637,24 @@ html {
   color: #fff;
   padding: 10px 20px 20px;
   text-align: center;
+}
+@media (max-width: 1182px) {
+  .view {
+    width: 315px;
+  }
+}
+@media (max-width: 992.98px) {
+  .view {
+    width: 245px;
+    height: 330px;
+  }
+}
+@media (max-width: 767.98px) {
+  .view {
+    width: 480px;
+    height: 550px;
+    margin: 5px auto;
+  }
 }
 
 .view-first .mask {
@@ -554,8 +700,11 @@ html {
   height: 100%;
 }
 .footer__logo {
-  width: 70px;
+  width: 60px;
   margin: 40px auto;
+}
+.footer__logo a img {
+  width: 60px;
 }
 .footer__contact {
   max-width: 300px;
@@ -564,11 +713,22 @@ html {
   justify-content: space-between;
 }
 .footer__contact__item {
-  margin: 100px;
+  margin: 1000px;
+}
+@media (max-width: 767.98px) {
+  .footer__contact__item img {
+    width: 10px;
+  }
 }
 .footer__about {
   margin: 40px 0 30px 0;
   font-weight: 400;
   text-align: center;
   color: #8d8d8d;
+}
+
+@media (max-width: 767.98px) {
+  .contact__item img {
+    width: 45px;
+  }
 }

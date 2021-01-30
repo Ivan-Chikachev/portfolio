@@ -309,6 +309,73 @@ html {
   margin: 7px 0 0;
 }
 
+.popup {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(224, 224, 224, 0.11);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+}
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 20px;
+}
+.popup__content {
+  background: #1b1a1a;
+  color: white;
+  min-width: 500px;
+  max-width: 800px;
+  min-height: 300px;
+  padding: 30px;
+  position: relative;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  opacity: 0;
+  transition: all 0.7s ease 0s;
+}
+@media (max-width: 767.98px) {
+  .popup__content {
+    min-width: 300px;
+    padding: 18px;
+  }
+}
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+.popup__title {
+  font-size: 32px;
+  margin: 0 0 15px 10px;
+}
+.popup__text table tr td {
+  padding: 8px 10px 0;
+}
+.popup__area {
+  cursor: default;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
 .intro-block {
   margin: 80px 10px 10px 50px;
 }
@@ -527,7 +594,7 @@ html {
 .element__item {
   width: 240px;
   text-align: center;
-  border-bottom: 5px solid #7492ff;
+  border-bottom: 5px solid rgba(220, 0, 0, 0.6);
   padding: 85px 0 40px;
   margin: 0 0 20px;
 }
@@ -613,7 +680,7 @@ html {
 }
 
 .tetris {
-  background: url("../img/tetris.png") no-repeat center;
+  background: url("../img/tetris2.png") no-repeat center;
 }
 
 .view {
@@ -701,9 +768,9 @@ html {
 }
 @media (max-width: 767.98px) {
   .view {
-    width: 100%;
+    width: 98%;
     height: 500px;
-    margin: 5px 5px;
+    margin: 5px;
   }
 }
 
@@ -734,7 +801,8 @@ html {
   transition: all 0.3s linear;
 }
 .view-mask:hover h2,
-.view-mask:hover p, .view-mask:hover a {
+.view-mask:hover p,
+.view-mask:hover a {
   opacity: 1;
   transform: translateX(0px);
 }
@@ -745,7 +813,7 @@ html {
   opacity: 1;
 }
 
-.repo {
+.link {
   color: rgba(116, 146, 255, 0.945);
 }
 

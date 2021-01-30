@@ -51,7 +51,7 @@ $md4: 479.98;
 		--size: 150px;
 	}
 }
-.btn-2{
+.btn-2 {
 	overflow: hidden;
 	border-radius: 100px;
 	display: inline-block;
@@ -62,7 +62,7 @@ $md4: 479.98;
 	border-radius: 30px;
 	color: rgb(255, 255, 255);
 	background-color: rgba(116, 146, 255, 1);
-	&:hover{
+	&:hover {
 		background-color: rgba(27, 26, 26, 1);
 		transition: .2s;
 		box-shadow: 0 0 5px rgba(116, 146, 255, 0.644);
@@ -205,6 +205,84 @@ html {
 	.header-body__logo {
 		margin: 7px 0 0;
 	}
+}
+
+//------Contacts------
+.popup {
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(224, 224, 224, 0.11);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease 0s;
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 70px 20px;
+	}
+
+	&__content {
+		background: rgba(27, 26, 26, 1);
+		color: rgb(255, 255, 255);
+		min-width: 500px;
+		max-width: 800px;
+		min-height: 300px;
+		padding: 30px;
+		position: relative;
+		transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+		opacity: 0;
+		transition: all 0.7s ease 0s;
+		@media (max-width: $md3+px) {
+			min-width: 300px;
+			padding: 18px;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 20px;
+	}
+
+	&__title {
+		font-size: 32px;
+		margin: 0 0 15px 10px;
+	}
+
+	&__text {
+		table {
+			
+			tr {
+				td{
+					padding: 8px 10px 0;
+				}
+			}
+		}
+	}
+	&__area {
+		cursor: default;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+	}
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
+	&:target &__content {
+		transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+		opacity: 1;
+	}
+	
 }
 
 //------Intro-block----
@@ -394,7 +472,7 @@ html {
 	&__item {
 		width: 240px;
 		text-align: center;
-		border-bottom: 5px solid rgba(116, 146, 255, 1);
+		border-bottom: 5px solid rgba(220, 0, 0, 0.6);
 		padding: 85px 0 40px;
 		margin: 0 0 20px;
 		h5 {
@@ -462,10 +540,9 @@ html {
 	background: url('../img/table.png') no-repeat center;
 }
 .tetris {
-	background: url('../img/tetris.png') no-repeat center;
+	background: url('../img/tetris2.png') no-repeat center;
 }
 .view {
-
 	border-radius: 15px;
 	width: 380px;
 	height: 380px;
@@ -516,13 +593,13 @@ html {
 		text-align: center;
 		line-height: 25px;
 		@media (max-width: $md2+px) {
-		line-height: 17px;
-		padding: 6px;
+			line-height: 17px;
+			padding: 6px;
 		}
 		@media (max-width: $md3+px) {
 			line-height: 25px;
 			padding: 10px 20px 10px;
-			}
+		}
 	}
 	@media (max-width: $md1+px) {
 		width: 315px;
@@ -533,9 +610,9 @@ html {
 	}
 
 	@media (max-width: $md3+px) {
-		width: 100%;
+		width: 98%;
 		height: 500px;
-		margin: 5px 5px;
+		margin: 5px;
 	}
 }
 .view-mask {
@@ -560,14 +637,15 @@ html {
 		opacity: 0;
 		transition: all 0.2s linear;
 	}
-	a{
+	a {
 		transform: translateY(340px);
 		opacity: 0;
 		transition: all 0.3s linear;
 	}
 	&:hover {
 		h2,
-		p, a {
+		p,
+		a {
 			opacity: 1;
 			transform: translateX(0px);
 		}
@@ -579,8 +657,8 @@ html {
 		}
 	}
 }
-.repo{
-	color:rgba(116, 146, 255, 0.945);
+.link {
+	color: rgba(116, 146, 255, 0.945);
 }
 
 //-----footer-----
@@ -631,9 +709,9 @@ html {
 }
 //------about table-----
 
-.about-table{
+.about-table {
 	margin: 20px 5px;
-	h2{
+	h2 {
 		margin: 0 0 20px;
 		font-size: 34px;
 		font-weight: 700;
@@ -642,7 +720,7 @@ html {
 			font-size: 28px;
 		}
 	}
-	p{
+	p {
 		margin: 15px 0px;
 		font-size: 16px;
 		line-height: 25px;
@@ -651,7 +729,7 @@ html {
 			line-height: 22px;
 		}
 	}
-	h4{
+	h4 {
 		margin: 0 0 20px;
 		font-size: 26px;
 		font-weight: 700;

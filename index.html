@@ -18,8 +18,11 @@
 
   <body>
     <div class="wrapper">
+
+  <!---------------header--------------->
+
       <div class="first-scrin">
-        <header class="header">
+        <header id="header" class="header">
           <div class="container">
             <div class="header-body">
               <div class="header-body__logo">
@@ -29,12 +32,35 @@
                 <nav class="menu__nav nav">
                   <a class="nav__item" href="#about-me">Обо мне</a>
                   <a class="nav__item" href="#portfolio">Портфолио</a>
-                  <a class="nav__item" href="">Контакты</a>
+                  <a class="nav__item" href="#popup">Контакты</a>
                 </nav>
               </div>
             </div>
           </div>
         </header>
+
+    <!---------------contact--------------->
+
+        <div id="popup" class="popup">
+          <a href="#header" class="popup__area"></a>
+          <div class="popup__body">
+            <div class="popup__content">
+              <a href="#header" class="popup__close"><img src="img/cross.png" alt=""></a>
+              <div class="popup__title">Контакты</div>
+              <div class="popup__text">
+                <table>
+                  <tr><td>Номер телефона:</td><td>+7 980 687 56 69</td></tr>
+                  <tr><td>E-mail:</td><td>ivan-chikachev@mail.ru</td></tr>
+                  <tr><td>VK:</td><td><a href="https://vk.com/ivan_chikachev">vk.com/ivan-chikachev</a></td></tr>
+                  <tr><td>WhatsApp</td><td>+7 980 687 56 69</td></tr>
+                  <tr><td>Telegram</td><td>+7 980 687 56 69</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!---------------intro block--------------->
 
         <div class="container">
           <div class="intro-block">
@@ -43,11 +69,13 @@
             </div>
             <div class="intro-block_item"><span>Front-end developer</span></div>
             <div class="intro-block_item">
-              <a href="" class=" btn">Обо мне</a>
+              <a href="#about-me" class=" btn">Обо мне</a>
             </div>
           </div>
         </div>
       </div>
+
+     <!---------------about me--------------->
 
       <div id="about-me" class="second-scrin">
         <div class="container">
@@ -77,6 +105,8 @@
           </div>
         </div>
       </div>
+
+     <!--------------- skills--------------->
 
       <div class="three-scrin">
         <div class="container">
@@ -127,9 +157,7 @@
                   <img src="img/bem.png" alt="" /><span>БЭМ</span>
                 </div>
                 <div class="logo__item">
-                  <img src="img/google.png" alt="" /><span
-                    >Самый главный навык!</span
-                  >
+                  <img src="img/google.png" alt="" /><span>Самый главный навык!</span>
                 </div>
               </div>
             </div>
@@ -156,27 +184,25 @@
               <div class="view view-mask works__items mu">
                 <div class="mask">
                   <h2>
-                    <a href="https://ivan-chikachev.github.io/munutd-news/"
-                      >Сайт ФК МЮ</a
-                    >
+                    <a class="link" href="https://ivan-chikachev.github.io/munutd-news/">Сайт ФК МЮ</a>
                   </h2>
                   <p>Одна рабочая ссылка "News".</p>
                   <p>
                     Было применено: адаптивная верстка, бургер-меню, верстка с
                     помощью SCSS, БЭМ, FlexBox
                   </p>
-                  <p><a href="https://github.com/Ivan-Chikachev/munutd-news" class="repo">Репозиторий</a></p>
+                  <p><a href="https://github.com/Ivan-Chikachev/munutd-news" class="link">Репозиторий</a></p>
                 </div>
               </div>
               <div class="view view-mask works__items table">
                 <div class="mask">
-                  <h2><a href="https://ivan-chikachev.github.io/table/">React-app Таблица</a></h2>
+                  <h2><a class="link" href="https://ivan-chikachev.github.io/table/">React-app Таблица</a></h2>
                   <p>Тестовое задание на позицию junior-developer</p>
                   <p>
                     Была создана таблица с запросом на пользователей. Таблица
                     имеет различный функционал
                   </p>
-                  <p><a href="https://github.com/Ivan-Chikachev/table" class="repo">Репозиторий</a></p>
+                  <p><a href="https://github.com/Ivan-Chikachev/table" class="link">Репозиторий</a></p>
                   <p>
                     ТЗ и более подробно о задании можно прочитать нажав на
                     кнопку
@@ -186,18 +212,20 @@
               </div>
               <div class="view view-mask works__items tetris">
                 <div class="mask">
-                  <h2><a href=" https://ivan-chikachev.github.io/tetris/
-                    ">Тетрис</a></h2>
+                  <h2><a class="link" href=" https://ivan-chikachev.github.io/tetris/">Тетрис</a></h2>
                   <p>Игра на JavaScript</p>
                   <p>Был использован нативный JS</p>
                   <p>Верстка по макету</p>
-                  <p><a href="https://github.com/Ivan-Chikachev/tetris" class="repo">Репозиторий</a></p>
+                  <p><a href="https://github.com/Ivan-Chikachev/tetris" class="link">Репозиторий</a></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+     <!--------------- footer--------------->
+
       <div class="five-scrin">
         <div class="container">
           <footer class="footer">

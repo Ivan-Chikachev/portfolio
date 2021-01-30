@@ -126,6 +126,24 @@ h6 {
   --size: 150px;
 }
 
+.btn-2 {
+  overflow: hidden;
+  border-radius: 100px;
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  color: white;
+  background-color: #7492ff;
+}
+.btn-2:hover {
+  background-color: #1b1a1a;
+  transition: 0.2s;
+  box-shadow: 0 0 5px rgba(116, 146, 255, 0.644);
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -446,7 +464,7 @@ html {
   }
 }
 .skills .programm {
-  width: 400px;
+  width: 500px;
   margin: 40px auto;
   padding: 20px 10px;
 }
@@ -468,7 +486,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .skills .programm .logo__item img {
-    height: 40px;
+    height: 37px;
   }
 }
 .skills .programm .logo__item span {
@@ -479,11 +497,13 @@ html {
 }
 @media (max-width: 767.98px) {
   .skills .programm .logo__item {
-    margin: 5px 7px;
+    width: 50px;
+    margin: 5px 2px;
   }
 }
 @media (max-width: 767.98px) {
   .skills .programm {
+    width: 320px;
     margin: 50px auto 30px;
     padding: 20px 5px;
   }
@@ -555,13 +575,21 @@ html {
   font-weight: 700;
   margin: 0 0 20px;
 }
+@media (max-width: 767.98px) {
+  .portfolio__name h3 {
+    text-align: center;
+  }
+}
 .portfolio__name p {
   line-height: 25px;
   width: 700px;
 }
 @media (max-width: 767.98px) {
   .portfolio__name p {
-    width: 400px;
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    line-height: 20px;
   }
 }
 .portfolio__works {
@@ -623,7 +651,7 @@ html {
 @media (max-width: 767.98px) {
   .view .mask,
 .view .content {
-    width: 440px;
+    width: 100%;
     height: 500px;
   }
 }
@@ -632,7 +660,6 @@ html {
   position: relative;
 }
 .view h2 {
-  text-transform: uppercase;
   color: #fff;
   text-align: center;
   position: relative;
@@ -642,11 +669,24 @@ html {
   margin: 20px 0 0 0;
 }
 .view p {
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
   color: #fff;
-  padding: 10px 20px 20px;
+  padding: 10px 15px 7px;
   text-align: center;
+  line-height: 25px;
+}
+@media (max-width: 992.98px) {
+  .view p {
+    line-height: 17px;
+    padding: 6px;
+  }
+}
+@media (max-width: 767.98px) {
+  .view p {
+    line-height: 25px;
+    padding: 10px 20px 10px;
+  }
 }
 @media (max-width: 1182px) {
   .view {
@@ -661,46 +701,52 @@ html {
 }
 @media (max-width: 767.98px) {
   .view {
-    width: 440px;
+    width: 100%;
     height: 500px;
-    margin: 5px auto;
+    margin: 5px 5px;
   }
 }
 
-.view-first .mask {
+.view-mask .mask {
+  border-radius: 15px;
   opacity: 0;
-  background-color: rgba(8, 11, 19, 0.856);
+  background-color: rgba(8, 11, 19, 0.884);
   transition: all 0.4s ease-in-out;
 }
-.view-first h2 {
+.view-mask h2 {
   transform: translateY(-100px);
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
-.view-first p {
+.view-mask p {
   transform: translateY(100px);
   opacity: 0;
   transition: all 0.2s linear;
 }
-.view-first p {
+.view-mask p {
   transform: translateY(100px);
   opacity: 0;
   transition: all 0.2s linear;
 }
-.view-first a.info {
+.view-mask a {
+  transform: translateY(340px);
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s linear;
 }
-.view-first:hover h2,
-.view-first:hover p {
+.view-mask:hover h2,
+.view-mask:hover p, .view-mask:hover a {
   opacity: 1;
   transform: translateX(0px);
 }
-.view-first:hover p {
-  transition-delay: 0.1s;
+.view-mask:hover p {
+  transition-delay: 0.2s;
 }
-.view-first:hover .mask {
+.view-mask:hover .mask {
   opacity: 1;
+}
+
+.repo {
+  color: rgba(116, 146, 255, 0.945);
 }
 
 .footer {
@@ -740,5 +786,42 @@ html {
 @media (max-width: 767.98px) {
   .contact__item img {
     width: 45px;
+  }
+}
+
+.about-table {
+  margin: 20px 5px;
+}
+.about-table h2 {
+  margin: 0 0 20px;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .about-table h2 {
+    font-size: 28px;
+  }
+}
+.about-table p {
+  margin: 15px 0px;
+  font-size: 16px;
+  line-height: 25px;
+}
+@media (max-width: 767.98px) {
+  .about-table p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.about-table h4 {
+  margin: 0 0 20px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .about-table h4 {
+    font-size: 22px;
   }
 }

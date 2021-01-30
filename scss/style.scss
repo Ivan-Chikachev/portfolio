@@ -51,6 +51,23 @@ $md4: 479.98;
 		--size: 150px;
 	}
 }
+.btn-2{
+	overflow: hidden;
+	border-radius: 100px;
+	display: inline-block;
+	border: 0;
+	cursor: pointer;
+	text-decoration: none;
+	padding: 15px 40px;
+	border-radius: 30px;
+	color: rgb(255, 255, 255);
+	background-color: rgba(116, 146, 255, 1);
+	&:hover{
+		background-color: rgba(27, 26, 26, 1);
+		transition: .2s;
+		box-shadow: 0 0 5px rgba(116, 146, 255, 0.644);
+	}
+}
 
 // ------ ОБОЛОЧКА -----//
 .wrapper {
@@ -190,7 +207,7 @@ html {
 	}
 }
 
-//---Intro-block----s
+//------Intro-block----
 .intro-block {
 	margin: 80px 10px 10px 50px;
 	@media (max-width: $md3+px) {
@@ -321,7 +338,7 @@ html {
 		}
 	}
 	.programm {
-		width: 400px;
+		width: 500px;
 		margin: 40px auto;
 		padding: 20px 10px;
 		h3 {
@@ -338,7 +355,7 @@ html {
 					height: 60px;
 					margin: 0 0 20px;
 					@media (max-width: $md3+px) {
-						height: 40px;
+						height: 37px;
 					}
 				}
 				span {
@@ -348,11 +365,13 @@ html {
 					width: 70px;
 				}
 				@media (max-width: $md3+px) {
-					margin: 5px 7px;
+					width: 50px;
+					margin: 5px 2px;
 				}
 			}
 		}
 		@media (max-width: $md3+px) {
+			width: 320px;
 			margin: 50px auto 30px;
 			padding: 20px 5px;
 		}
@@ -411,12 +430,18 @@ html {
 			font-size: 42px;
 			font-weight: 700;
 			margin: 0 0 20px;
+			@media (max-width: $md3+px) {
+				text-align: center;
+			}
 		}
 		p {
 			line-height: 25px;
 			width: 700px;
 			@media (max-width: $md3+px) {
-				width: 400px;
+				width: 100%;
+				margin: 5px;
+				text-align: center;
+				line-height: 20px;
 			}
 		}
 	}
@@ -440,6 +465,7 @@ html {
 	background: url('../img/tetris.png') no-repeat center;
 }
 .view {
+
 	border-radius: 15px;
 	width: 380px;
 	height: 380px;
@@ -465,7 +491,7 @@ html {
 		}
 
 		@media (max-width: $md3+px) {
-			width: 440px;
+			width: 100%;
 			height: 500px;
 		}
 	}
@@ -474,7 +500,6 @@ html {
 		position: relative;
 	}
 	h2 {
-		text-transform: uppercase;
 		color: #fff;
 		text-align: center;
 		position: relative;
@@ -484,13 +509,21 @@ html {
 		margin: 20px 0 0 0;
 	}
 	p {
-		font-size: 12px;
+		font-size: 14px;
 		position: relative;
 		color: #fff;
-		padding: 10px 20px 20px;
+		padding: 10px 15px 7px;
 		text-align: center;
+		line-height: 25px;
+		@media (max-width: $md2+px) {
+		line-height: 17px;
+		padding: 6px;
+		}
+		@media (max-width: $md3+px) {
+			line-height: 25px;
+			padding: 10px 20px 10px;
+			}
 	}
-
 	@media (max-width: $md1+px) {
 		width: 315px;
 	}
@@ -500,15 +533,16 @@ html {
 	}
 
 	@media (max-width: $md3+px) {
-		width: 440px;
+		width: 100%;
 		height: 500px;
-		margin: 5px auto;
+		margin: 5px 5px;
 	}
 }
-.view-first {
+.view-mask {
 	.mask {
+		border-radius: 15px;
 		opacity: 0;
-		background-color: rgba(8, 11, 19, 0.856);
+		background-color: rgba(8, 11, 19, 0.884);
 		transition: all 0.4s ease-in-out;
 	}
 	h2 {
@@ -526,23 +560,27 @@ html {
 		opacity: 0;
 		transition: all 0.2s linear;
 	}
-	a.info {
+	a{
+		transform: translateY(340px);
 		opacity: 0;
-		transition: all 0.2s ease-in-out;
+		transition: all 0.3s linear;
 	}
 	&:hover {
 		h2,
-		p {
+		p, a {
 			opacity: 1;
 			transform: translateX(0px);
 		}
 		p {
-			transition-delay: 0.1s;
+			transition-delay: 0.2s;
 		}
 		.mask {
 			opacity: 1;
 		}
 	}
+}
+.repo{
+	color:rgba(116, 146, 255, 0.945);
 }
 
 //-----footer-----
@@ -588,6 +626,38 @@ html {
 			@media (max-width: $md3+px) {
 				width: 45px;
 			}
+		}
+	}
+}
+//------about table-----
+
+.about-table{
+	margin: 20px 5px;
+	h2{
+		margin: 0 0 20px;
+		font-size: 34px;
+		font-weight: 700;
+		text-align: center;
+		@media (max-width: $md3+px) {
+			font-size: 28px;
+		}
+	}
+	p{
+		margin: 15px 0px;
+		font-size: 16px;
+		line-height: 25px;
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+	h4{
+		margin: 0 0 20px;
+		font-size: 26px;
+		font-weight: 700;
+		text-align: center;
+		@media (max-width: $md3+px) {
+			font-size: 22px;
 		}
 	}
 }

@@ -226,15 +226,19 @@ html {
 		align-items: center;
 		justify-content: center;
 		padding: 70px 20px;
+		@media (max-width: $md3+px) {
+			
+			padding: 70px 15px;
+		}
 	}
 
 	&__content {
 		background: rgba(27, 26, 26, 1);
 		color: rgb(255, 255, 255);
-		min-width: 500px;
+		min-width: 550px;
 		max-width: 800px;
-		min-height: 300px;
-		padding: 30px;
+		min-height: 350px;
+		padding: 30px 40px;
 		position: relative;
 		transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 		opacity: 0;
@@ -242,7 +246,7 @@ html {
 		box-shadow: 5px 5px 10px rgb(0, 0, 0);
 		@media (max-width: $md3+px) {
 			min-width: 300px;
-			padding: 20px 15px;
+			padding: 20px 10px;
 		}
 	}
 
@@ -254,7 +258,7 @@ html {
 
 	&__title {
 		font-size: 32px;
-		margin: 0 0 15px 10px;
+		margin: 0 0 20px 0px;
 		@media (max-width: $md3+px) {
 			margin: 0 0 15px 5px;
 		}
@@ -262,12 +266,11 @@ html {
 
 	&__text {
 		table {
-			
 			tr {
 				td{
-					padding: 10px 10px 10px 30px;
+					padding: 10px 10px 10px 33px;
 					@media (max-width: $md3+px) {
-						padding: 10px 5px 10px 30px;
+						padding: 10px 0px 10px 5px;
 					}
 				}
 			}
@@ -291,18 +294,23 @@ html {
 		opacity: 1;
 	}
 	.vk{
+		padding:0 0 0 33px;
 		background: url(../img/vk2.png) no-repeat 0 3px;
 	}
 	.tg{
+		padding:0 0 0 33px;
 		background: url(../img/tg.png) no-repeat 0 3px;
 	}
 	.whats{
+		padding:0 0 0 33px;
 		background: url(../img/whats.png) no-repeat 0 3px;
 	}
 	.phone{
+		padding:0 0 0 33px;
 		background: url(../img/phone.png) no-repeat 0 3px ;
 	}
 	.mail{
+		padding:0 0 0 33px;
 		background: url(../img/mail.png) no-repeat 0 3px;
 	}
 }

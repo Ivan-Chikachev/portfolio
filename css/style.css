@@ -315,7 +315,7 @@ html {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(224, 224, 224, 0.185);
+  background: rgba(134, 134, 134, 0.78);
   top: 0;
   left: 0;
   opacity: 0;
@@ -323,6 +323,7 @@ html {
   transition: all 0.8s ease 0s;
 }
 .popup__body {
+
   min-height: 100%;
   display: flex;
   align-items: center;
@@ -354,6 +355,7 @@ html {
   }
 }
 .popup__close {
+
   position: absolute;
   right: 17px;
   top: 17px;
@@ -384,6 +386,7 @@ html {
   right: 0;
 }
 .popup:target {
+
   opacity: 1;
   visibility: visible;
 }
@@ -610,7 +613,7 @@ html {
   background: url("../img/js.png") top center no-repeat;
 }
 .skills .react {
-  background: url("../img/react.png") top center no-repeat;
+  background: url("../img/react.svg") top center no-repeat;
 }
 .skills .css {
   background: url("../img/css.png") top center no-repeat;

@@ -214,7 +214,7 @@ html {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: rgba(224, 224, 224, 0.185);
+	background: rgba(102, 102, 102, 0.66);
 	top: 0;
 	left: 0;
 	opacity: 0;
@@ -357,6 +357,7 @@ html {
 		line-height: 1;
 		text-align: left;
 		margin: 0 0 30px;
+
 		b {
 			border-bottom: 5px solid rgba(220, 0, 0, 0.555);
 		}
@@ -364,7 +365,11 @@ html {
 			font-size: 38px;
 		}
 	}
+
 	&__text {
+		opacity: 0;
+		transform: translate(-120%, 0px);
+		transition: .8s;
 		margin: 5px 20px 5px 5px;
 		width: 45%;
 		@media (max-width: $md2+px) {
@@ -384,7 +389,15 @@ html {
 			}
 		}
 	}
+	&__text._active{
+		opacity: 1;
+		transform: translate(0px, 0px);
+		transition: .8s;
+	}
 	&__photo {
+		opacity: 0;
+		transform: translate(120%, 0px);
+		transition: .8s;
 		width: 40%;
 		background: rgb(27, 27, 27);
 		img {
@@ -399,6 +412,11 @@ html {
 			width: 80%;
 			margin: 10px 20px 10px 5px;
 		}
+	}
+	&__photo._active{
+		opacity: 1;
+		transform: translate(0px, 0px);
+		transition: .8s;
 	}
 }
 //----skills----
@@ -480,16 +498,16 @@ html {
 		}
 	}
 	.js {
-		background: url('../img/js.png') top center no-repeat;
+		background: url('../img/js.svg') top center no-repeat;
 	}
 	.react {
-		background: url('../img/react.png') top center no-repeat;
+		background: url('../img/react.svg') top center no-repeat;
 	}
 	.css {
-		background: url('../img/css.png') top center no-repeat;
+		background: url('../img/css.svg') top center no-repeat;
 	}
 	.html {
-		background: url('../img/html.png') top center no-repeat;
+		background: url('../img/html.svg') top center no-repeat;
 	}
 }
 .element {
@@ -524,6 +542,42 @@ html {
 	@media (max-width: $md3+px) {
 		margin: 10px 3px;
 	}
+}
+.element:nth-child(1){
+	opacity: 0;
+	transform: translate(-160%, 0px);
+	transition: 1s;
+}
+.element:nth-child(2){
+	opacity: 0;
+	transform: translate(-130%, 0px);
+	transition: .5s;
+}
+.element:nth-child(3){
+	opacity: 0;
+	transform: translate(130%, 0px);
+	transition: .5s;
+}
+.element:nth-child(4){
+	opacity: 0;
+	transform: translate(160%, 0px);
+	transition: 1s;
+}
+.element:nth-child(1)._active{
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+.element:nth-child(2)._active{
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+.element:nth-child(3)._active{
+	opacity: 1;
+	transform: translate(0px, 0px);
+}
+.element:nth-child(4)._active{
+	opacity: 1;
+	transform: translate(0px, 0px);
 }
 //-----portfolio------
 .portfolio {
@@ -665,7 +719,7 @@ html {
 	a {
 		transform: translateY(340px);
 		opacity: 0;
-		transition: all 0.3s linear;
+		transition: all 0.5s linear;
 	}
 	&:hover {
 		h2,

@@ -28,7 +28,7 @@ if (animItems.length > 0) {
             let animItem = animItems[i];
             let animItemHeight = animItem.offsetHeight;
             let animItemOffset = offset(animItem).top;
-            let animStart = 5;
+            let animStart = 2;
 
             let animItemPoint = window.innerHeight - animItemHeight / animStart;
             if (animItemHeight > window.innerHeight) {
@@ -55,7 +55,7 @@ if (animItems.length > 0) {
 
     setTimeout(() => {
         animOnScroll();
-    }, 300)
+    }, 1000)
 }
 
   
